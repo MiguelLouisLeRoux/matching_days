@@ -184,7 +184,7 @@ p {
 }
 
 header {
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: bolder;
   padding-top: 2%;
@@ -202,20 +202,33 @@ header {
   border: solid 0.2rem darkorange;
 }
 
+
 span {
   color: whitesmoke;
 }
 
+.gap {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .green {
-  background-color: greenyellow;
+  background-color: rgb(38, 245, 38);
+  color: #333447;
+  font-weight: bolder;
+  border: rgb(38, 245, 38);
 }
 
 .crimson {
   background-color: crimson;
+  border: crimson;
 }
 
 .coral {
   background-color: coral;
+  color: #333447;
+  font-weight: bolder;
+  border: coral;
 }
 
 @media only screen and (min-width: 33.75em) {  /* 540px */

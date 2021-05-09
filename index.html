@@ -8,9 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <title>Matching Days</title>
     <script type="text/x-template" class="userTemplate">
-        <ul>
-            <li>{{week_day}}</li>
-        </ul>
+        {{#each day}}
+            <li class="week-day">
+                {{this}}
+            </li>
+        {{/each}}
     </script>
 </head>
 <body>
@@ -20,19 +22,11 @@
         </div>
     </header>
     <br>
-
+    <br>
     <div class="row">
         <div class="center">
             <div class="the-bar">
-                <ul class="bar">
-                    <li class="week-day" id="week-day1">Monday</li>
-                    <li class="week-day" id="week-day2">Tuesday</li>
-                    <li class="week-day" id="week-day3">Wednesday</li>
-                    <li class="week-day" id="week-day4">Thursday</li>
-                    <li class="week-day" id="week-day5">Friday</li>
-                    <li class="week-day" id="week-day6">Saturday</li>
-                    <li class="week-day" id="week-day0">Sunday</li>
-                </ul>
+                
             </div>
         </div>
     </div>
@@ -46,19 +40,15 @@
         </div>
     </div>
     <br>
-
-    <div class="row">
-        <div class="center">
-            <label class="input"><span>First Date: <input type="date" class="date1"> </span></label>
-        </div>
-    </div>
-    <br>
     <br>
     <div class="row">
-        <div class="center">
-            <label class="input"><span>Second Date: <input type="date" class="date2"> </span></label>
-        </div>
+            <div class="center">
+                <label class="input1"><span>First Date: <input type="date" class="date1"> </span></label>
+                <span class="gap"></span>
+                <label class="input2"><span>Second Date: <input type="date" class="date2"> </span></label>
+            </div>
     </div>
+    
     
     <script src="unit-tests/factory.js"></script>
     <script src="dom.js"></script>
