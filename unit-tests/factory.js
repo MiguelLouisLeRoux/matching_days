@@ -4,6 +4,8 @@ function Factory() {
 
     var firstDate = "the first date";
     var secondDate = "the second date";
+    var firstColour = "red";
+    var secondColour = "purple";
 
     function getTheFirstDay(date) {
         var newDate = new Date(date);
@@ -27,11 +29,19 @@ function Factory() {
         }
     }
 
+    function theMatch() {
+        if (firstDate === secondDate) {
+            return "green";
+        }
+    }
+
     function values() {
         return {
             weekList : arr,
             firstdate : firstDate,
-            seconddate : secondDate
+            seconddate : secondDate,
+            theFirstColour : firstColour,
+            theSecondColour : secondColour
         }
     }
 
@@ -39,7 +49,8 @@ function Factory() {
     return { values, 
              getTheFirstDay,
              getTheSecondDay,
-             checkMatch
+             checkMatch,
+             theMatch
 
     }
 }
