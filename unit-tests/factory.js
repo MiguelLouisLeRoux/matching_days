@@ -1,5 +1,6 @@
 function Factory() {
-    arr = ["Sunday", "Monday", "Tuesday", "Wednesdy", "Thursday", "Friday", "Saturday"];
+
+    var arr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     var firstDate = "the first date";
     var secondDate = "the second date";
@@ -18,6 +19,14 @@ function Factory() {
         return secondDate;
     }
 
+    function checkMatch() {
+        if (firstDate === secondDate) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     function values() {
         return {
             weekList : arr,
@@ -26,9 +35,11 @@ function Factory() {
         }
     }
 
+
     return { values, 
              getTheFirstDay,
              getTheSecondDay,
+             checkMatch
 
     }
 }

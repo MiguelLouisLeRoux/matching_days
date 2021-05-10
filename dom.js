@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
     weekDayBar.innerHTML = userDataHTML;
 
     firstDate.addEventListener("change", function() {
-       
+        console.log(firstDate.value);
         var list = document.getElementsByTagName("li");
         var theFirstDay = theFactory.getTheFirstDay(firstDate.value);
         for (var i = 0; i < list.length; i++) {
@@ -32,10 +32,19 @@ document.addEventListener('DOMContentLoaded', function(){
                 list[i].classList.remove("coral");
                 list[i].classList.remove("crimson");
                 list[i].classList.add("green");
+                
             } else if (theFirstDay == itt && theFactory.values().firstdate != theFactory.values().seconddate) {
-                
-                list[i].classList.add("crimson");
-                
+                list[i].classList.add("crimson"); 
+
+                for (var k = 0; k < list.length; k++) {
+                    var itt3 = list[k].innerHTML.trim();
+                    
+
+                    if (theFactory.values().seconddate === itt3) {
+                        list[k].classList.remove("green");
+                        list[k].classList.add("coral");
+                    }
+                }
             }
 
         }     
@@ -51,16 +60,22 @@ document.addEventListener('DOMContentLoaded', function(){
             list2[j].classList.remove("coral");
             list2[j].classList.remove("green");
 
-            console.log(theFactory.values().firstdate);
-            console.log(theFactory.values().seconddate);
-
             if (theFactory.values().seconddate === theFactory.values().firstdate && theSecondDay == itt2) {
                 list2[j].classList.remove("coral");
                 list2[j].classList.remove("crimson");
                 list2[j].classList.add("green");
+                
             } else if (theSecondDay == itt2 && theFactory.values().seconddate != theFactory.values().firstdate) {
                 list2[j].classList.add("coral");
-               
+
+                for (var l = 0; l < list2.length; l++) {
+                    var itt4 = list2[l].innerHTML.trim();
+                    
+                    if (theFactory.values().firstdate === itt4) {
+                        list2[l].classList.remove("green");
+                        list2[l].classList.add("crimson");
+                    }
+                }
             }
 
         }
