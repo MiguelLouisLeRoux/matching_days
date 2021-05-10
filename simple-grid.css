@@ -207,7 +207,12 @@ span {
   color: whitesmoke;
 }
 
+.input1, .gap, .input2 {
+  display: inline-block;
+}
+
 .gap {
+  /* display: inline-block; */
   margin-left: 2rem;
   margin-right: 2rem;
 }

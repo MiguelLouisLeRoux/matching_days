@@ -1,13 +1,13 @@
 describe ("Matching Days", function(){
     describe ("Should be able to get the day for the date selected", function(){
-        it('Should return Monday for the first date inserted as follows:17/05/2021', function(){
+        it('Should return Monday for the following first date inserted: 17/05/2021', function(){
 
             var matchingTests = Factory();
             
             assert.equal('Monday', matchingTests.getTheFirstDay('2021-05-17'));
         })
 
-        it('Should return Wednesday for the second date inserted as follows:12/05/2021', function(){
+        it('Should return Wednesday for the following second date inserted: 12/05/2021', function(){
 
             var matchingTests = Factory();
             
