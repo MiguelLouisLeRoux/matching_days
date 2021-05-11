@@ -207,14 +207,17 @@ span {
   color: whitesmoke;
 }
 
-.input1, .gap, .input2 {
+/* .input1, .gap, .input2 {
   display: inline-block;
 }
 
 .gap {
-  /* display: inline-block; */
   margin-left: 2rem;
   margin-right: 2rem;
+} */
+
+.theDate {
+  margin-bottom: 5%;
 }
 
 .green {
@@ -294,11 +297,27 @@ span {
   .hidden-sm {
     display: block;
   }
+
+  .theDate {
+    margin-left: 10%;
+  }
+
+  .theDate2 {
+    margin-right: 10%;
+  }
 }
 
 @media only screen and (min-width: 60em) { /* 960px */
   .container {
     width: 75%;
     max-width: 60rem;
+  }
+
+  .theDate {
+    margin-left: 30%;
+  }
+
+  .theDate2 {
+    margin-right: 30%;
   }
 }

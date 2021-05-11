@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function(){
     weekDayBar.innerHTML = userDataHTML;
 
     firstDate.addEventListener("change", function() {
-        console.log(firstDate.value);
         var list = document.getElementsByTagName("li");
         var theFirstDay = theFactory.getTheFirstDay(firstDate.value);
         for (var i = 0; i < list.length; i++) {
